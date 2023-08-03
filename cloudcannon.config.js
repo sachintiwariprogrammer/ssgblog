@@ -1,14 +1,11 @@
 module.exports = {
   collections_config: {
     posts: {
-      path: '_posts',
-      parser: 'front-matter',
-      url: (filePath, parsed, { filters }) => {
-        const year = new Date(parsed.date).getFullYear();
-        const slug = filters.slugify(parsed.title || '');
-        return `/posts/${id}/`;
-      },
-      output: true
+      name:"Posts",
+      path:"src/pages/posts",
+      parser:"frontmatter",
+      output:true,
+      url:"posts/[id]"
     },
   },
 };
