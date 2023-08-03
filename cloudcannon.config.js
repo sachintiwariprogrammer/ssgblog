@@ -5,7 +5,7 @@ module.export = {
             path: "src/pages/posts",
             parser: "frontmatter",
             output: true,
-            url:"/posts/[postid]"
+            url:"/posts/[id]"
         }
     }
 }
