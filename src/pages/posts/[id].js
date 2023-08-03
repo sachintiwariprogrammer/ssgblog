@@ -47,16 +47,6 @@ export default function BlogCard({post}) {
   );
 }
 
-// export async function getServerSideProps({ params }) {
-//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.postid}`);
-//     const data = await res.json();
-//     return {
-//       props: {
-//         post: data,
-//       },
-//     };
-// }
-
 export const getStaticPaths = async () => {
     const res = await fetch(`${baseUrl}/posts`)
     const posts = await res.json()
@@ -67,6 +57,7 @@ export const getStaticPaths = async () => {
   
     return { paths, fallback: false }
   }
+  
   
   export const getStaticProps = async ({ params }) => {
     const res = await fetch(`${baseUrl}/posts/${params.id}`)
