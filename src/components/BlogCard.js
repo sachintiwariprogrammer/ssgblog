@@ -15,7 +15,7 @@ export default function BlogCard({data}) {
         }
       </CardContent>
       <CardActions>
-        <Link href={`${data.id}`}><Button size="small">Learn More</Button></Link>
+        <Link href={`posts/${data.id}`}><Button size="small">Learn More</Button></Link>
       </CardActions>
     </Card>
   );
